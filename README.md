@@ -100,12 +100,7 @@ smart-dustbin-iot/
 │   ├── prototype.jpg
 │   └── dashboard.png
 │
-├── report/
-│   └── Smart_Dustbin_Report.pdf
-│
-├── README.md
-├── LICENSE
-└── .gitignore
+└── README.md
 ```
 
 ---
