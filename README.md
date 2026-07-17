@@ -1,88 +1,135 @@
-# Smart Dustbin IoT
+# 🗑️ Smart Dustbin IoT
 
-An ESP32/ESP8266-based Smart Dustbin that automatically detects incoming waste, captures an image, communicates with a Flask backend for AI-based classification, and controls a servo motor to direct waste into the appropriate compartment.
+A Smart Dustbin built using the ESP8266 microcontroller that automatically detects, classifies, and segregates waste into **wet** and **dry** categories while providing real-time monitoring through a web dashboard.
 
-This project demonstrates the integration of embedded systems, IoT communication, computer vision, and automation.
+The system integrates multiple sensors for waste detection, moisture-based classification, garbage level monitoring, and fire detection to improve waste management efficiency.
 
 ---
 
 ## Features
 
-- Ultrasonic object detection
-- Automatic image capture
-- Wi-Fi communication
-- HTTP API integration
-- AI-based waste classification
-- Servo-controlled waste segregation
-- Automatic reset mechanism
-- Real-time backend communication
+- Automatic Waste Detection
+- Wet/Dry Waste Classification
+- Servo-controlled Waste Segregation
+- Bin Level Monitoring
+- Fire Hazard Detection
+- Real-time IoT Dashboard
+- Wi-Fi Connectivity
+- Automatic Notifications
 
 ---
 
-## Hardware
+## Hardware Components
 
-- ESP32-CAM / ESP8266
-- HC-SR04 Ultrasonic Sensors
+- ESP8266 Wi-Fi Module
+- Ultrasonic Sensor
+- Soil Moisture Sensor
 - Servo Motor
-- 5V Power Supply
+- IR Sensors
+- Flame Sensor
+- Breadboard
+- Jumper Wires
 
 ---
 
-## Software
+## Software Used
 
 - Arduino IDE
-- ESP32 Libraries
-- HTTPClient
-- Wi-Fi Library
-- Flask Backend
-- TensorFlow/Keras Model
+- ESP8266 Wi-Fi Libraries
+- Embedded C++
+- Web Dashboard
 
 ---
 
 ## Working Principle
 
-1. Detect object using ultrasonic sensor.
-2. Capture waste image.
-3. Send image to Flask server.
-4. Backend predicts waste category.
-5. Receive prediction.
-6. Rotate servo accordingly.
-7. Return servo to neutral position.
+1. The ultrasonic sensor detects when waste is placed near the dustbin.
+2. The soil moisture sensor measures the moisture content of the waste.
+3. The ESP8266 classifies the waste as **wet** or **dry**.
+4. The servo motor rotates the flap to direct the waste into the correct compartment.
+5. IR sensors monitor the fill level of both bins.
+6. The flame sensor continuously checks for fire hazards.
+7. All sensor data is transmitted over Wi-Fi to a web dashboard for remote monitoring.
 
 ---
 
-## Firmware Features
+## System Architecture
 
-- Wi-Fi Connectivity
-- HTTP POST Requests
-- Camera Control
-- Servo Automation
-- Distance Monitoring
-- Automatic Reset Logic
+```
+Ultrasonic Sensor
+        │
+        ▼
+ESP8266 Controller
+        │
+ ┌──────┼──────────────┐
+ │      │              │
+ ▼      ▼              ▼
+Soil   Servo      Wi-Fi Module
+Sensor  Motor          │
+ │                     ▼
+ ▼              Web Dashboard
+IR Sensors
+ │
+ ▼
+Flame Sensor
+```
 
 ---
 
-## Technologies
+## Technologies Used
 
 - C++
 - Arduino IDE
-- ESP32
-- HTTP
-- REST API
+- ESP8266
+- IoT
 - Wi-Fi
+- Embedded Systems
+
+---
+
+## Project Structure
+
+```
+smart-dustbin-iot/
+│
+├── firmware/
+│   └── smart_dustbin.ino
+│
+├── images/
+│   ├── block_diagram.png
+│   ├── prototype.jpg
+│   └── dashboard.png
+│
+├── report/
+│   └── Smart_Dustbin_Report.pdf
+│
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
+---
+
+## How It Works
+
+- Detects incoming waste using an ultrasonic sensor.
+- Measures moisture to classify waste as wet or dry.
+- Rotates a servo-controlled flap to the appropriate compartment.
+- Continuously monitors garbage levels using IR sensors.
+- Detects fire hazards using a flame sensor.
+- Uploads live sensor data to a web interface through the ESP8266.
 
 ---
 
 ## Future Improvements
 
-- MQTT Communication
-- OTA Firmware Updates
-- Secure Wi-Fi Provisioning
-- On-device TensorFlow Lite
-- Battery Operation
-- Mobile Application
-- Cloud Dashboard
-- Multi-bin Deployment
+- Mobile application integration
+- MQTT-based communication
+- GPS-enabled smart waste collection
+- Solar-powered operation
+- AI-based waste recognition
+- Cloud analytics
+- Multi-bin management
 
 ---
 
@@ -90,11 +137,12 @@ This project demonstrates the integration of embedded systems, IoT communication
 
 This project helped me understand:
 
-- Embedded Programming
-- IoT Communication
-- REST APIs
-- ESP32 Development
-- Sensor Integration
-- Servo Control
-- Edge AI Concepts
-- Hardware-Software Integration
+- Internet of Things (IoT)
+- Embedded Systems Programming
+- ESP8266 Development
+- Sensor Interfacing
+- Servo Motor Control
+- Real-time Monitoring
+- Wi-Fi Communication
+- Automation Systems
+
