@@ -82,7 +82,8 @@ smart-dustbin-iot/
 │   ├── block_diagram.png
 |   ├── connectivity_diagram.png
 │   ├── dashboard1.png
-│   └── dashboard2.png
+│   ├── dashboard2.png
+|   └── system_architecture.png
 │
 └── README.md
 ```
