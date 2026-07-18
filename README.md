@@ -55,24 +55,7 @@ The system integrates multiple sensors for waste detection, moisture-based class
 
 ## System Architecture
 
-```
-Ultrasonic Sensor
-        │
-        ▼
-ESP8266 Controller
-        │
- ┌──────┼──────────────┐
- │      │              │
- ▼      ▼              ▼
-Soil   Servo      Wi-Fi Module
-Sensor  Motor          │
- │                     ▼
- ▼              Web Dashboard
-IR Sensors
- │
- ▼
-Flame Sensor
-```
+![System Architecture](images/system_architecture.jpg)
 
 ---
 
@@ -97,8 +80,9 @@ smart-dustbin-iot/
 │
 ├── images/
 │   ├── block_diagram.png
-│   ├── prototype.jpg
-│   └── dashboard.png
+|   ├── connectivity_diagram.png
+│   ├── dashboard1.png
+│   └── dashboard2.png
 │
 └── README.md
 ```
