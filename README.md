@@ -55,7 +55,7 @@ The system integrates multiple sensors for waste detection, moisture-based class
 
 ## System Architecture
 
-![System Architecture](images/system_architecture.jpg)
+![System Architecture](images/system_architecture.png)
 
 ---
 
